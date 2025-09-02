@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: ["images.unsplash.com"], // whitelist Unsplash
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        // pathname: '/**' // allows all paths
+      },
+    ],
   },
 };
 
